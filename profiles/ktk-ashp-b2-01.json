@@ -1,0 +1,3052 @@
+{
+  "name": "KTK ASHP/B2/01",
+  "source": "scanned.pdf - KTK Multipower_v9.34.00 21-221296-ID40.mcxs variable list; site photo 2026-06-05",
+  "machine": {
+    "tag": "ASHP/B2/01",
+    "manufacturer": "KTK Klimatechnik / G.I. Industrial",
+    "model": "JWAWP 131 S/G/PIA P",
+    "serial": "21-221296_4",
+    "year": "2023",
+    "refrigerant": "R452B",
+    "chargeKg": 35,
+    "lowPressureBar": 29,
+    "highPressureBar": 45,
+    "temperatureMinC": -20,
+    "temperatureMaxC": 46,
+    "waterMaxPressureBar": 6
+  },
+  "connection": {
+    "protocol": "Modbus RTU",
+    "slaveId": 40,
+    "baudRate": 19200,
+    "serial": "8N1",
+    "notes": "The scan shows Serial address (Modbus)=40, baud enum 6=19200, serial settings 0=8N1. If no reply, confirm the service menu and try the previous KTK default slave 10."
+  },
+  "registers": [
+    {
+      "group": "Chiller overview",
+      "name": "Alarm notification",
+      "register": 16387,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-2 enum"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "On/Off status",
+      "register": 16388,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Compressor status",
+      "register": 16389,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=ALL OFF, enum"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Evaporator pump",
+      "register": 16395,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF, enum"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Condenser fan/pump",
+      "register": 16396,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF, enum"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Heaters",
+      "register": 16397,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Remote ON-OFF",
+      "register": 16398,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Defrost status",
+      "register": 16399,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Cool/Heat mode",
+      "register": 16400,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=COOL"
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Control probe",
+      "register": 16480,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Actual setpoint",
+      "register": 16481,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Requested power",
+      "register": 16484,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "%",
+      "notes": ""
+    },
+    {
+      "group": "Chiller overview",
+      "name": "Actual power",
+      "register": 16485,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "%",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 1",
+      "name": "Valve opening degree",
+      "register": 20738,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "%",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 1",
+      "name": "S2 temperature",
+      "register": 20741,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 1",
+      "name": "Actual superheat",
+      "register": 20742,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 1",
+      "name": "Superheat reference",
+      "register": 20743,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 1",
+      "name": "Evaporator pressure",
+      "register": 20744,
+      "function": "03",
+      "scale": 0.01,
+      "unit": "bar",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 1",
+      "name": "Evaporator temperature",
+      "register": 20745,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 1",
+      "name": "Status",
+      "register": 20749,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF"
+    },
+    {
+      "group": "Expansion valve 2",
+      "name": "Valve opening degree",
+      "register": 20838,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "%",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 2",
+      "name": "S2 temperature",
+      "register": 20841,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 2",
+      "name": "Actual superheat",
+      "register": 20842,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 2",
+      "name": "Superheat reference",
+      "register": 20843,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 2",
+      "name": "Evaporator pressure",
+      "register": 20844,
+      "function": "03",
+      "scale": 0.01,
+      "unit": "bar",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 2",
+      "name": "Evaporator temperature",
+      "register": 20845,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": ""
+    },
+    {
+      "group": "Expansion valve 2",
+      "name": "Status",
+      "register": 20849,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=OFF"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 1 circuit 1",
+      "register": 16417,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 2 circuit 1",
+      "register": 16418,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 3 circuit 1",
+      "register": 16419,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 4 circuit 1",
+      "register": 16420,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 5 circuit 1",
+      "register": 16421,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 6 circuit 1",
+      "register": 16422,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 1 circuit 2",
+      "register": 16423,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 2 circuit 2",
+      "register": 16424,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 3 circuit 2",
+      "register": 16425,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 4 circuit 2",
+      "register": 16426,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 5 circuit 2",
+      "register": 16427,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Compressor status",
+      "name": "Compressor 6 circuit 2",
+      "register": 16428,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0-4 enum"
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 1 C1 aging",
+      "register": 16801,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 2 C1 aging",
+      "register": 16803,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 3 C1 aging",
+      "register": 16805,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 4 C1 aging",
+      "register": 16807,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 5 C1 aging",
+      "register": 16809,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 6 C1 aging",
+      "register": 16811,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 1 C2 aging",
+      "register": 16813,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 2 C2 aging",
+      "register": 16815,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 3 C2 aging",
+      "register": 16817,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 4 C2 aging",
+      "register": 16819,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 5 C2 aging",
+      "register": 16821,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Compressor 6 C2 aging",
+      "register": 16823,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Internal pump 1 aging",
+      "register": 16825,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "Internal pump 2 aging",
+      "register": 16827,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "External pump 1 aging",
+      "register": 16829,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Run hours / aging",
+      "name": "External pump 2 aging",
+      "register": 16831,
+      "function": "03",
+      "scale": 1,
+      "unit": "h",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 1 circuit 1 starts",
+      "register": 16670,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 2 circuit 1 starts",
+      "register": 16671,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 3 circuit 1 starts",
+      "register": 16672,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 4 circuit 1 starts",
+      "register": 16673,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 5 circuit 1 starts",
+      "register": 16674,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 6 circuit 1 starts",
+      "register": 16675,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 1 circuit 2 starts",
+      "register": 16676,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 2 circuit 2 starts",
+      "register": 16677,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 3 circuit 2 starts",
+      "register": 16678,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 4 circuit 2 starts",
+      "register": 16679,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 5 circuit 2 starts",
+      "register": 16680,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Compressor starts",
+      "name": "Compressor 6 circuit 2 starts",
+      "register": 16681,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Analog inputs",
+      "name": "Inlet water evaporator temperature",
+      "register": 21762,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "NTC-10K"
+    },
+    {
+      "group": "Analog inputs",
+      "name": "Outlet water evaporator temperature 1",
+      "register": 21763,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "NTC-10K"
+    },
+    {
+      "group": "Analog inputs",
+      "name": "Discharge pressure circuit 1",
+      "register": 21766,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "barg",
+      "notes": "4-20mA"
+    },
+    {
+      "group": "Analog outputs",
+      "name": "Condenser speed fan 1",
+      "register": 22018,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "%",
+      "notes": "0-10V"
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Remote ON/OFF",
+      "register": 21309,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Protection heaters",
+      "register": 21280,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "High pressure switch circuit 1",
+      "register": 21299,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Low pressure switch circuit 1",
+      "register": 21302,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Protection compressor 1 circuit 1",
+      "register": 21253,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Protection compressor 2 circuit 1",
+      "register": 21254,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Protection compressor 3 circuit 1",
+      "register": 21255,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Evaporator water flow status",
+      "register": 21304,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Phases/voltage status",
+      "register": 21311,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Remote cooling/heating",
+      "register": 21314,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Protection condenser fans",
+      "register": 21287,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Protection evaporator pump 1",
+      "register": 21306,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital inputs",
+      "name": "Protection evaporator pump 2",
+      "register": 21307,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Heaters 1",
+      "register": 21518,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Compressor 1 circuit 1",
+      "register": 21506,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Compressor 2 circuit 1",
+      "register": 21507,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Compressor 3 circuit 1",
+      "register": 21508,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Condenser speed fan 1",
+      "register": 21532,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Four-way valve circuit 1",
+      "register": 21536,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Evaporator pump 1",
+      "register": 21522,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "Evaporator pump 2",
+      "register": 21523,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Digital outputs",
+      "name": "General alarm",
+      "register": 21534,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": ""
+    },
+    {
+      "group": "Alarms",
+      "name": "General alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Phase loss alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Evaporator flow switch alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser flow switch alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "General evaporator pumps alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Evaporator pump 1 protection alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Evaporator pump 2 protection alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Evaporator pump 2 ON",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "High leaving water temperature",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Evap pump run hours exceeded",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Evap pump 2 run hours exceeded",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Cond fan/pump run hours exceeded",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Defrost max time circ 1 exceeded",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Defrost max time circ 2 exceeded",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Evaporator 1 antifreeze alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Evaporator 2 antifreeze alarm",
+      "register": 20481,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20481.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "General high pressure alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 high pressure alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 high pressure alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "General high pressure alarm from AI",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 high pressure alarm from AI",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 high pressure alarm from AI",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "General low pressure alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 low pressure alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 low pressure alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "General low pressure alarm from AI",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 low pressure alarm from AI",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 low pressure alarm from AI",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "General compressors protection alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 compressors protection",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 compressors protection",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 1 circuit 1 protection alarm",
+      "register": 20482,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20482.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 2 circuit 1 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 3 circuit 1 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 4 circuit 1 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 5 circuit 1 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 6 circuit 1 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 1 circuit 2 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 2 circuit 2 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 3 circuit 2 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 4 circuit 2 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 5 circuit 2 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 6 circuit 2 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "General condenser fan protection",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 condenser fan protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 condenser fan protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 1 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 2 protection alarm",
+      "register": 20483,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20483.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 3 protection alarm",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 4 protection alarm",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 5 protection alarm",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 6 protection alarm",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 7 protection alarm",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser fan 8 protection alarm",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 1 circuit 1 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 2 circuit 1 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 3 circuit 1 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 4 circuit 1 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 5 circuit 1 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 6 circuit 1 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 1 circuit 2 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 2 circuit 2 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 3 circuit 2 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 4 circuit 2 run hours exceeded",
+      "register": 20484,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20484.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 5 circuit 2 run hours exceeded",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 6 circuit 2 run hours exceeded",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Inlet water evaporator temperature alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Outlet water evaporator temperature 1 alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Outlet water evaporator temperature 2 alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Outlet water evaporator temperature mix alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Discharge pressure circuit 1 alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Discharge pressure circuit 2 alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Outdoor temperature alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Variable setpoint alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Inlet water condenser temperature alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Outlet water condenser temperature alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Combo defrost temp C1 alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Combo defrost temp C2 alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Boiler safety alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Suction pressure circuit 1 alarm",
+      "register": 20485,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20485.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Suction pressure circuit 2 alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Freecooling temperature alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Suction temperature circuit 1 alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Suction temperature circuit 2 alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Motocondenser AI alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Additional antifreeze probe alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Discharge temperature circuit 1 alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Discharge temperature circuit 2 alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply temperature alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Return temperature alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Ambient temperature alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply air pressure alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Air quality alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply humidity alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Return humidity alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Outdoor humidity alarm",
+      "register": 20486,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20486.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Antifrost sensor circuit 1 alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Antifrost sensor circuit 2 alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "EHA temperature alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Return air pressure alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Oil pressure screw 1 alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Oil pressure screw 2 alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "General heaters protection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 heaters protection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 heaters protection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Heater 1 protection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Heater 2 protection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Heater 3 protection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Heater 4 protection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Antifreeze freecooling alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 connection alarm",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 S2 error",
+      "register": 20487,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20487.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 S4 error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 Pe error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 external reference signal error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 no refrigerant selected",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 valve error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 battery low",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV1 CAN driver diagnostics",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 connection alarm",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 S2 error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 S4 error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 Pe error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 external reference signal error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 no refrigerant selected",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 valve error",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 battery low",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "EEV2 CAN driver diagnostics",
+      "register": 20488,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20488.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Network error",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Master error",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 1",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 2",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 3",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 4",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 5",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 6",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 7",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Alarm node 8",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "General condenser pumps alarm",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser pump 1 protection alarm",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Condenser pump 2 protection alarm",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "EXC1 connection error",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor inverter alarm",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Modbus inverter communication error",
+      "register": 20489,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20489.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Oil recovery procedure",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Oil level alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Balance action warning",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Waiting for boost action",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Boost action warning",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 high discharge temperature alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 high discharge temperature alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Low compression ratio alarm C1",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Low compression ratio alarm C2",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 vacuum alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 vacuum alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Low ambient temperature alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "High boiler temperature alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "General oil pressure switch alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 1 oil pressure switch alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Circuit 2 oil pressure switch alarm",
+      "register": 20490,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20490.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 1 circuit 1 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 2 circuit 1 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 3 circuit 1 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 4 circuit 1 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 5 circuit 1 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 6 circuit 1 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 1 circuit 2 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 2 circuit 2 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 3 circuit 2 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 4 circuit 2 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 5 circuit 2 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Compressor 6 circuit 2 oil pressure switch alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Unit OFF",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Maintenance service warning",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply damper locked",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply damper alarm",
+      "register": 20491,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20491.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "External damper locked",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "External damper alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply fan alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Return fan alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Humidifier alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Dehumidifier alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Recovery alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.14",
+      "bit": 14
+    },
+    {
+      "group": "Alarms",
+      "name": "Recovery pump alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.15",
+      "bit": 15
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply fan safety switch",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.00",
+      "bit": 0
+    },
+    {
+      "group": "Alarms",
+      "name": "Fire alarm",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.01",
+      "bit": 1
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply flow",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.02",
+      "bit": 2
+    },
+    {
+      "group": "Alarms",
+      "name": "Supply filter",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.03",
+      "bit": 3
+    },
+    {
+      "group": "Alarms",
+      "name": "Frost alarm circuit 1",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.04",
+      "bit": 4
+    },
+    {
+      "group": "Alarms",
+      "name": "Frost alarm circuit 2",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.05",
+      "bit": 5
+    },
+    {
+      "group": "Alarms",
+      "name": "Frost EHA temperature",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.06",
+      "bit": 6
+    },
+    {
+      "group": "Alarms",
+      "name": "Low gas delta pressure circuit 1",
+      "register": 20492,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20492.07",
+      "bit": 7
+    },
+    {
+      "group": "Alarms",
+      "name": "Low gas delta pressure circuit 2",
+      "register": 20493,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20493.08",
+      "bit": 8
+    },
+    {
+      "group": "Alarms",
+      "name": "Low oil delta pressure screw 1",
+      "register": 20493,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20493.09",
+      "bit": 9
+    },
+    {
+      "group": "Alarms",
+      "name": "Low oil delta pressure screw 2",
+      "register": 20493,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20493.10",
+      "bit": 10
+    },
+    {
+      "group": "Alarms",
+      "name": "Warning forced defrost C1",
+      "register": 20493,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20493.11",
+      "bit": 11
+    },
+    {
+      "group": "Alarms",
+      "name": "Warning forced defrost C2",
+      "register": 20493,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20493.12",
+      "bit": 12
+    },
+    {
+      "group": "Alarms",
+      "name": "Data log fault",
+      "register": 20493,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20493.13",
+      "bit": 13
+    },
+    {
+      "group": "Alarms",
+      "name": "Event log fault",
+      "register": 20493,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Packed status bit from ADU 20493.14",
+      "bit": 14
+    },
+    {
+      "group": "Service parameters",
+      "name": "Cooling temperature setpoint",
+      "register": 8261,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Minimum setpoint limit in cooling",
+      "register": 7081,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Maximum setpoint limit in cooling",
+      "register": 7082,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Heating temperature setpoint",
+      "register": 8264,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Minimum setpoint limit in heating",
+      "register": 7084,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Maximum setpoint limit in heating",
+      "register": 7085,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "C",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Cooling proportional band",
+      "register": 7086,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "K",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Heating proportional band",
+      "register": 7087,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "K",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Cooling integral time",
+      "register": 7088,
+      "function": "03",
+      "scale": 1,
+      "unit": "s",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Heating integral time",
+      "register": 7089,
+      "function": "03",
+      "scale": 1,
+      "unit": "s",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Remote setpoint enable",
+      "register": 7094,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "0=NO"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Max power in demand limit",
+      "register": 7095,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "%",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Flow switch alarm reset type",
+      "register": 7033,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "High pressure alarm setpoint from AI",
+      "register": 7041,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "bar",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Low pressure alarm setpoint from AI",
+      "register": 7047,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "bar",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Service parameters",
+      "name": "Low pressure alarm diff from AI",
+      "register": 7048,
+      "function": "03",
+      "scale": 0.1,
+      "unit": "bar",
+      "notes": "RW in controller; app reads only"
+    },
+    {
+      "group": "Serial settings",
+      "name": "Serial address (Modbus)",
+      "register": 7311,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Scan default shown as 40; set app slave to match controller"
+    },
+    {
+      "group": "Serial settings",
+      "name": "Serial baudrate (Modbus)",
+      "register": 7312,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Enum 33, scan default 6=19200"
+    },
+    {
+      "group": "Serial settings",
+      "name": "Serial settings (Modbus)",
+      "register": 7313,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Enum 34, scan default 0=8N1"
+    },
+    {
+      "group": "Serial settings",
+      "name": "External Com enable",
+      "register": 7314,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Enum 39, scan default 2=Auto"
+    },
+    {
+      "group": "Serial settings",
+      "name": "External Com baudrate",
+      "register": 7315,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Enum 33, scan default 6=19200"
+    },
+    {
+      "group": "Serial settings",
+      "name": "External Com settings",
+      "register": 7316,
+      "function": "03",
+      "scale": 1,
+      "unit": "",
+      "notes": "Enum 34, scan default 0=8N1"
+    }
+  ]
+}

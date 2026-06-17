@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modbus Register Explorer</title>
+    <link rel="stylesheet" href="styles.css?v=20260617-w3000-serial" />
+  </head>
+  <body>
+    <main class="app-shell explorer-shell">
+      <section class="toolbar" aria-label="Register explorer controls">
+        <div class="brand">
+          <h1>Modbus Register Explorer</h1>
+          <p id="summary">Read-only register sweep and machine comparison</p>
+        </div>
+        <div class="controls explorer-controls">
+          <label>
+            Machine
+            <input id="machineName" placeholder="B2/01, Chiller 1..." />
+          </label>
+          <label>
+            Baud
+            <input id="baudRate" type="number" min="1200" step="1200" value="19200" />
+          </label>
+          <label>
+            Serial
+            <select id="serialFormat">
+              <option value="8N1">8N1</option>
+              <option value="8N2">8N2</option>
+              <option value="8E1">8E1</option>
+              <option value="8O1">8O1</option>
+            </select>
+          </label>
+          <label>
+            Slave
+            <input id="slaveId" type="number" min="1" max="247" value="10" />
+          </label>
+          <label>
+            Function
+            <select id="functionCode">
+              <option value="03">03 holding</option>
+              <option value="04">04 input</option>
+            </select>
+          </label>
+          <button id="connectBtn" type="button">Connect</button>
+          <button id="themeToggle" type="button" class="secondary theme-button">Dark</button>
+        </div>
+      </section>
+
+      <section class="status-strip" aria-label="Explorer status">
+        <div><span>Port</span><strong id="portState">Disconnected</strong></div>
+        <div><span>Progress</span><strong id="progressState">Idle</strong></div>
+        <div><span>Found</span><strong id="foundCount">0</strong></div>
+        <div><span>Last error</span><strong id="lastError">None</strong></div>
+      </section>
+
+      <section class="workspace">
+        <aside class="side-panel" aria-label="Scan tools">
+          <div class="panel-block">
+            <h2>Scan Range</h2>
+            <label>
+              Preset
+              <select id="preset">
+                <option value="w3000-service">MEHP-iB W3000 service 1-180</option>
+                <option value="w3000-compressors">MEHP-iB W3000 compressor 40-130</option>
+                <option value="w3000-alarms">MEHP-iB W3000 alarms 140-180, 345-354 separately</option>
+                <option value="t3c-live">KTK T3C live area 8700-8950</option>
+                <option value="t3c-condenser">KTK T3C condenser 9300-9320</option>
+                <option value="mcx-live">MCX common live 16000-22000</option>
+                <option value="custom">Custom</option>
+              </select>
+            </label>
+            <div class="button-row">
+              <label>Start <input id="startRegister" type="number" min="0" max="65535" value="8700" /></label>
+              <label>End <input id="endRegister" type="number" min="0" max="65535" value="8950" /></label>
+            </div>
+            <div class="button-row">
+              <label>Block <input id="blockSize" type="number" min="1" max="60" value="10" /></label>
+              <label>Delay ms <input id="delayMs" type="number" min="0" max="2000" step="50" value="150" /></label>
+            </div>
+            <button id="scanBtn" type="button" disabled>Scan range</button>
+            <button id="stopBtn" type="button" class="secondary" disabled>Stop</button>
+            <p class="hint">Read-only scan. Use small ranges first, then widen once you know the controller is happy.</p>
+          </div>
+
+          <div class="panel-block">
+            <h2>Snapshots</h2>
+            <button id="downloadJsonBtn" type="button" disabled>Download JSON</button>
+            <button id="downloadCsvBtn" type="button" disabled>Download CSV</button>
+            <label class="file-button">
+              Load snapshot A
+              <input id="snapshotA" type="file" accept=".json" hidden />
+            </label>
+            <label class="file-button">
+              Load snapshot B
+              <input id="snapshotB" type="file" accept=".json" hidden />
+            </label>
+            <button id="compareBtn" type="button" class="secondary" disabled>Compare A/B</button>
+          </div>
+
+          <div class="panel-block">
+            <h2>Tips</h2>
+            <p class="hint">For same-model comparison, use the same slave, offset, function, start, end, and block size on both machines.</p>
+            <p class="hint">If one range causes timeouts, reduce block size to 1-5 or scan around the known live registers only.</p>
+          </div>
+        </aside>
+
+        <section class="values-panel" aria-label="Register results">
+          <div class="table-tools">
+            <label>
+              Filter
+              <input id="filterInput" placeholder="8855, 0x, changed..." />
+            </label>
+            <button id="clearBtn" type="button" class="secondary">Clear</button>
+          </div>
+
+          <section class="value-group">
+            <h2>Found Registers</h2>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Register</th>
+                    <th>Raw</th>
+                    <th>Signed</th>
+                    <th>Hex</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="value-group">
+            <h2>Comparison</h2>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Register</th>
+                    <th>A raw</th>
+                    <th>B raw</th>
+                    <th>Delta</th>
+                  </tr>
+                </thead>
+                <tbody id="compareBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="register-explorer.js?v=20260617-w3000-serial"></script>
+  </body>
+</html>

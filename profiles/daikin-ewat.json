@@ -1,0 +1,1662 @@
+﻿{
+    "name":  "Daikin EWAT Modbus",
+    "connection":  {
+                       "protocol":  "Modbus RTU",
+                       "baudRate":  19200,
+                       "serial":  "8N1",
+                       "slaveId":  1,
+                       "offset":  -1
+                   },
+    "registers":  [
+                      {
+                          "group":  "Unit",
+                          "name":  "Control Source",
+                          "register":  1,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Network | 1 Local - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Enabled State",
+                          "register":  2,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Disabled | 1 Enabled - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Run Allowed",
+                          "register":  3,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Allowed - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Capacity Limited",
+                          "register":  4,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NotLimited | 1 Limited - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Generic Alarm",
+                          "register":  5,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator",
+                          "name":  "Water Flow State",
+                          "register":  6,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoFlow | 1 Flow - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Operating State",
+                          "register":  8,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 ThermoOff | 1 ThermoOn - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Enable Setpoint",
+                          "register":  9,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Disable | 1 Enable - Access W - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Alarm Reset Setpoint",
+                          "register":  10,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 None | 1 Clear - Access W - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Active Operation Mode",
+                          "register":  11,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Ice | 1 Cool | 2 Heat | 3 Pursuit - Access R - Page 9",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Active Temperature Setpoint",
+                          "register":  12,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 9",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Actual Capacity",
+                          "register":  13,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Active Capacity Limit",
+                          "register":  14,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Status",
+                          "register":  15,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Start | 2 Run | 3 PreShutdown | 4 Service - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Imported",
+                          "name":  "Evaporator Entering Water Temperature",
+                          "register":  16,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 10",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Imported",
+                          "name":  "Evaporator Leaving Water Temperature",
+                          "register":  17,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 10",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Heat Recovery",
+                          "name":  "Enable Setpoint",
+                          "register":  18,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Disable | 1 Enable - Access W - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Heat Recovery",
+                          "name":  "Entering Water Temperature",
+                          "register":  22,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 10",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Heat Recovery",
+                          "name":  "Leaving Water Temperature",
+                          "register":  23,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 10",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Imported",
+                          "name":  "Outside Air Temperature",
+                          "register":  24,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 10",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Average Current",
+                          "register":  25,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "A",
+                          "notes":  "A - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Average Voltage",
+                          "register":  26,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "V",
+                          "notes":  "V - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Active Power",
+                          "register":  27,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kW",
+                          "notes":  "kW - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Warning Index",
+                          "register":  28,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0….65534 - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Problem Index",
+                          "register":  29,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0….65534 - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Fault Index",
+                          "register":  30,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0….65534 - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Warning Code",
+                          "register":  31,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0….65534 - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Problem Code",
+                          "register":  32,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0….65534 - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Fault Code",
+                          "register":  33,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0….65534 - Access R - Page 10",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Operation Mode Setpoint",
+                          "register":  34,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NULL | 1 Ice | 2 Cool | 3 Heat | 4 Pursuit - Access W - Page 11",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Cool Temperature Setpoint",
+                          "register":  35,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access W - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Ice Temperature Setpoint",
+                          "register":  36,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access W - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Heat Temperature Setpoint",
+                          "register":  37,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access W - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Capacity Limit Setpoint",
+                          "register":  38,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "%",
+                          "notes":  "% - Access W - Page 11",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Condenser Refrigerant Pressure",
+                          "register":  39,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kPa",
+                          "notes":  "kPa - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Condeser Saturated Temperature",
+                          "register":  40,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Evaporator Refrigerant Pressure",
+                          "register":  41,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kPa",
+                          "notes":  "kPa - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Evaporator Saturated Temperature",
+                          "register":  42,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Condenser Refrigerant Pressure",
+                          "register":  43,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kPa",
+                          "notes":  "kPa - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Condeser Saturated Temperature",
+                          "register":  44,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Evaporator Refrigerant Pressure",
+                          "register":  45,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kPa",
+                          "notes":  "kPa - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Evaporator Saturated Temperature",
+                          "register":  46,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Shutdown Alarm",
+                          "register":  51,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1 NoAlarm | 2 Alarm - Access R - Page 11",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Shutdown Alarm",
+                          "register":  52,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1 NoAlarm | 2 Alarm - Access R - Page 11",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Shutdown Alarm",
+                          "register":  54,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1 NoAlarm | 2 Alarm - Access R - Page 11",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Heat Recovery",
+                          "name":  "Temperature Setpoint",
+                          "register":  59,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access W - Page 11",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Heat Recovery",
+                          "name":  "Operating State",
+                          "register":  60,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Recirculation | 2 Regulation - Access R - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 1",
+                          "name":  "Suction Temperature",
+                          "register":  65,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 12",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 1",
+                          "name":  "Discharge Temperature",
+                          "register":  68,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 12",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 1",
+                          "name":  "Number of Starts",
+                          "register":  73,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "-",
+                          "notes":  "- - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 1",
+                          "name":  "Number of Running Hours",
+                          "register":  74,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 74-75 - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 2",
+                          "name":  "Number of Starts",
+                          "register":  86,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "-",
+                          "notes":  "- - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 2",
+                          "name":  "Number of Running Hours",
+                          "register":  87,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 87-88 - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 3",
+                          "name":  "Number of Starts",
+                          "register":  99,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "-",
+                          "notes":  "- - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 3",
+                          "name":  "Number of Running Hours",
+                          "register":  100,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 100-102 - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 1",
+                          "name":  "Suction Temperature",
+                          "register":  104,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 12",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 1",
+                          "name":  "Discharge Temperature",
+                          "register":  107,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 12",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 1",
+                          "name":  "Number of Starts",
+                          "register":  112,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "-",
+                          "notes":  "- - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 1",
+                          "name":  "Number of Running Hours",
+                          "register":  113,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 113-114 - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 2",
+                          "name":  "Number of Starts",
+                          "register":  125,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "-",
+                          "notes":  "- - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 2",
+                          "name":  "Number of Running Hours",
+                          "register":  126,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 126-127 - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 3",
+                          "name":  "Number of Starts",
+                          "register":  138,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "-",
+                          "notes":  "- - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 3",
+                          "name":  "Number of Running Hours",
+                          "register":  139,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 139-140 - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Freecooling",
+                          "name":  "Enable Setpoint",
+                          "register":  250,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Disable | 1 Enable - Access W - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Freecooling",
+                          "name":  "Status",
+                          "register":  251,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1 Off | 2 Start | 3 Mixed | 4 FreeCooling | 5 Mechanical - Access R - Page 12",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Freeccoling",
+                          "name":  "Enabled State",
+                          "register":  252,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Disabled | 1 Enabled - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Freecooling",
+                          "name":  "Circuit 1 Mode",
+                          "register":  253,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1 Mechanical | 2 Switching | 3 Switching | 4 FreeCooling | 5 FC Pumpdown | 6 FC Off - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Freecooling",
+                          "name":  "Circuit 2 Mode",
+                          "register":  254,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1 Mechanical | 2 Switching | 3 Switching | 4 FreeCooling | 5 FC Pumpdown | 6 FC Off - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator Pump",
+                          "name":  "Speed",
+                          "register":  296,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator Pump 1",
+                          "name":  "Number of Running Hours",
+                          "register":  303,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 303-304 - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator Pump 1",
+                          "name":  "Operating State",
+                          "register":  305,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Stop | 1 Run - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator Pump 2",
+                          "name":  "Number of Running Hours",
+                          "register":  306,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "h",
+                          "notes":  "h - Address range 306-307 - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator Pump 2",
+                          "name":  "Operating State",
+                          "register":  308,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Stop | 1 Run - Access R - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Measurement unit setpoint",
+                          "register":  316,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 English | 1 Metric - Access W - Page 13",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Model",
+                          "register":  317,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1 Centrifugal | 2 Water Cooled | 3 Air Cooled | 4 HeatPump | 5 Reserved | 6 Reserved | 7 Reserved | 8 Reserved | 9 Other - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Evaporator Entering Temperature Sensor Fault",
+                          "register":  366,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Warning",
+                          "name":  "Setpoint Reset Input Out of Range",
+                          "register":  377,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Warning",
+                          "name":  "Demand Limit Input Out of Range",
+                          "register":  378,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Warning",
+                          "name":  "Unload for Condenser High Pressure",
+                          "register":  395,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Warning",
+                          "name":  "Unload for Condenser High Pressure",
+                          "register":  396,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Warning",
+                          "name":  "Inhibition for Evaporator Low Pressure",
+                          "register":  411,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Warning",
+                          "name":  "Inhibition for Evaporator Low Pressure",
+                          "register":  412,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Warning",
+                          "name":  "Unload for Evaporator Low Pressure",
+                          "register":  416,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 14",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Warning",
+                          "name":  "Unload for Evaporator Low Pressure",
+                          "register":  417,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator Pump 1",
+                          "name":  "Fault",
+                          "register":  430,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Evaporator Pump 2",
+                          "name":  "Fault",
+                          "register":  431,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Outside Air Temperature Sensor Fault",
+                          "register":  446,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Comp 1 Alarm",
+                          "name":  "Motor Protection",
+                          "register":  466,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Comp 2 Alarm",
+                          "name":  "Motor Protection",
+                          "register":  467,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Comp 1 Alarm",
+                          "name":  "Motor Protection",
+                          "register":  468,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Comp 2 Alarm",
+                          "name":  "Motor Protection",
+                          "register":  469,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Comp 3 Alarm",
+                          "name":  "Motor Protection",
+                          "register":  470,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Comp 3 Alarm",
+                          "name":  "Motor Protection",
+                          "register":  471,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Condenser Pressure Sensor Fault",
+                          "register":  509,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Condenser Pressure Sensor Fault",
+                          "register":  511,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Condenser High Pressure",
+                          "register":  517,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 15",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Condenser High Pressure",
+                          "register":  519,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Discharge Temperature Sensor Fault",
+                          "register":  529,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Discharge Temperature Sensor Fault",
+                          "register":  531,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Evaporator Water Flow Loss",
+                          "register":  542,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Evaporator Water Freeze",
+                          "register":  543,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Evaporator Pressure Low",
+                          "register":  545,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Evaporator Pressure Low",
+                          "register":  547,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Evaporator Pressure Sensor Failure",
+                          "register":  552,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Evaporator Pressure Sensor Failure",
+                          "register":  554,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Too many restart",
+                          "register":  583,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Too many restart",
+                          "register":  585,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Evaporator Leaving Temperature Sensor Fault",
+                          "register":  589,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Mechanical High Pressure",
+                          "register":  601,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 16",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Mechanical High Pressure",
+                          "register":  603,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Comp 1 Alarm",
+                          "name":  "Suction Temperature Sensor Fault",
+                          "register":  698,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Comp 1 Alarm",
+                          "name":  "Suction Temperature Sensor Fault",
+                          "register":  700,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Controller Alarm",
+                          "name":  "Circuit 1 Board Offline",
+                          "register":  723,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Controller Alarm",
+                          "name":  "Circuit 2 Board Offline",
+                          "register":  724,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Pumpdown Failure",
+                          "register":  741,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Pumpdown Failure",
+                          "register":  742,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "External Event",
+                          "register":  745,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "No Pressure change at Start",
+                          "register":  747,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "No Pressure change at Start",
+                          "register":  748,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "External Alarm",
+                          "register":  800,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Alarm",
+                          "name":  "Wrong Phase Voltage",
+                          "register":  816,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1 Alarm",
+                          "name":  "Gas Leakage",
+                          "register":  844,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 17",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2 Alarm",
+                          "name":  "Gas Leakage",
+                          "register":  845,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Electrical Panel Temperature",
+                          "register":  850,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°C",
+                          "notes":  "°C - Access R - Page 18",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Unit Warning",
+                          "name":  "Electrical Panel Temp Sensor Fault",
+                          "register":  851,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit Warning",
+                          "name":  "Electrical Panel High Temperature",
+                          "register":  852,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 NoAlarm | 1 Alarm - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 3",
+                          "name":  "OffAuto Setpoint",
+                          "register":  1775,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Auto - Access W - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 3",
+                          "name":  "Operating State",
+                          "register":  1786,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 On - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 2",
+                          "name":  "OffAuto Setpoint",
+                          "register":  1788,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Auto - Access W - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 2",
+                          "name":  "Operating State",
+                          "register":  1799,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 On - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 1",
+                          "name":  "Actual Capacity",
+                          "register":  1800,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 1",
+                          "name":  "OffAuto Setpoint",
+                          "register":  1801,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Auto - Access W - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 2 Compressor 1",
+                          "name":  "Operating State",
+                          "register":  1812,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 On - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 3",
+                          "name":  "OffAuto Setpoint",
+                          "register":  1814,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Auto - Access W - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 3",
+                          "name":  "Operating State",
+                          "register":  1825,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 On - Access R - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 2",
+                          "name":  "OffAuto Setpoint",
+                          "register":  1827,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Auto - Access W - Page 18",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 2",
+                          "name":  "Operating State",
+                          "register":  1838,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 On - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 1",
+                          "name":  "Actual Capacity",
+                          "register":  1840,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 1",
+                          "name":  "OffAuto Setpoint",
+                          "register":  1841,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 Auto - Access W - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circ 1 Compressor 1",
+                          "name":  "Operating State",
+                          "register":  1852,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Off | 1 On - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Number of Circuits",
+                          "register":  1855,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1…2 - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Number of Compressors",
+                          "register":  1856,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "1…3 - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Number of Tons",
+                          "register":  1857,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "tons",
+                          "notes":  "tons - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Evaporator Superheat Active Setpoint",
+                          "register":  1896,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Evaporator Superheat Active Setpoint",
+                          "register":  1897,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Evaporator Superheat Temperature",
+                          "register":  1898,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Evaporator Superheat Temperature",
+                          "register":  1899,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Active Energy",
+                          "register":  1900,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kWh",
+                          "notes":  "kWh - Address range 1900-1901 - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Unit",
+                          "name":  "Power Factor",
+                          "register":  1902,
+                          "function":  "03",
+                          "scale":  0.01,
+                          "unit":  "-",
+                          "notes":  "- - Access R - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Variable Flow",
+                          "name":  "Plant Differential Pressure",
+                          "register":  1905,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kPa",
+                          "notes":  "kPa - Access W - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Varibale Flow",
+                          "name":  "Water Bypass Valve State",
+                          "register":  1906,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "",
+                          "notes":  "0 Closed | 1 Opened - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Varibale Flow",
+                          "name":  "Plant Differential Pressure setpoint",
+                          "register":  1909,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "kPa",
+                          "notes":  "kPa - Access W - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Variable Flow",
+                          "name":  "Plant Delta Temperature",
+                          "register":  1911,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°Dc",
+                          "notes":  "°Dc - Access R - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Variable Flow",
+                          "name":  "Plant Delta Temperature Setpoint",
+                          "register":  1913,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "°Dc",
+                          "notes":  "°Dc - Access W - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Variable Flow",
+                          "name":  "Evaporator Fixed Speed Setpoint",
+                          "register":  1915,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "%",
+                          "notes":  "% - Access W - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Expansion Valve Position",
+                          "register":  1966,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Fan Speed",
+                          "register":  1970,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 19",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Condenser Approach Temperature",
+                          "register":  1971,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 19",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Evaporator Approach Temperature",
+                          "register":  1972,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 20",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 2",
+                          "name":  "Fan Staging",
+                          "register":  1981,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "--",
+                          "notes":  "-- - Access R - Page 20",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Expansion Valve Position",
+                          "register":  1982,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 20",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Fan Speed",
+                          "register":  1986,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "%",
+                          "notes":  "% - Access R - Page 20",
+                          "signed":  false
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Condenser Approach Temperature",
+                          "register":  1987,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 20",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Evaporator Approach Temperature",
+                          "register":  1988,
+                          "function":  "03",
+                          "scale":  0.1,
+                          "unit":  "dK",
+                          "notes":  "dK - Access R - Page 20",
+                          "signed":  true
+                      },
+                      {
+                          "group":  "Circuit 1",
+                          "name":  "Fan Staging",
+                          "register":  1997,
+                          "function":  "03",
+                          "scale":  1,
+                          "unit":  "--",
+                          "notes":  "-- - Access R - Page 20",
+                          "signed":  false
+                      }
+                  ]
+}

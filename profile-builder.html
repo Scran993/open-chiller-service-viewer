@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Builder</title>
+    <link rel="stylesheet" href="styles.css?v=20260617-w3000-serial" />
+  </head>
+  <body>
+    <main class="builder-shell">
+      <section class="toolbar" aria-label="Profile builder heading">
+        <div class="brand">
+          <h1>Profile Builder</h1>
+          <p id="builderSummary">Create a JSON profile from CSV points</p>
+        </div>
+        <div class="controls builder-controls">
+          <a class="button-link" href="index.html">Back to viewer</a>
+          <button id="themeToggle" type="button" class="secondary theme-button">Dark</button>
+        </div>
+      </section>
+
+      <section class="builder-layout">
+        <aside class="side-panel" aria-label="Profile inputs">
+          <div class="panel-block">
+            <h2>Machine</h2>
+            <label>Profile name <input id="profileNameInput" placeholder="Daikin EWAT roof chiller" /></label>
+            <label>Baud <input id="baudRate" type="number" min="1200" step="1200" value="19200" /></label>
+            <label>Serial
+              <select id="serialFormat">
+                <option value="8N1">8N1</option>
+                <option value="8N2">8N2</option>
+                <option value="8E1">8E1</option>
+                <option value="8O1">8O1</option>
+              </select>
+            </label>
+            <label>Slave <input id="slaveId" type="number" min="1" max="247" value="1" /></label>
+            <label>Offset
+              <select id="addressOffset">
+                <option value="-1">-1</option>
+                <option value="0">0</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="panel-block">
+            <h2>Import Points</h2>
+            <label class="file-button">
+              Import CSV or JSON
+              <input id="profileFileInput" type="file" accept=".csv,.json,application/json,text/csv" />
+            </label>
+            <button id="downloadTemplateBtn" type="button" class="secondary">CSV template</button>
+            <label>Paste CSV
+              <textarea id="pasteCsvInput" rows="9" placeholder="description,address,gain,range,read_write,type&#10;Unit - Actual Capacity,13,0.1,%,R,UNSIGNED WORD"></textarea>
+            </label>
+            <button id="loadPastedCsvBtn" type="button">Load pasted CSV</button>
+          </div>
+
+          <div class="panel-block">
+            <h2>Import Check</h2>
+            <div id="importReport" class="import-report">No import yet.</div>
+          </div>
+
+          <div class="panel-block">
+            <h2>Export</h2>
+            <button id="saveLocalProfileBtn" type="button">Save to this viewer</button>
+            <button id="exportProfileBtn" type="button">Download JSON profile</button>
+            <p class="hint">Saved profiles appear in the viewer as <strong>Saved: profile name</strong>. JSON export is still useful for sharing with another engineer.</p>
+          </div>
+        </aside>
+
+        <section class="values-panel" aria-label="Profile preview">
+          <div class="table-tools">
+            <label>
+              Filter
+              <input id="previewFilterInput" placeholder="pressure, temp, alarm..." />
+            </label>
+            <strong id="previewCount">0 points</strong>
+          </div>
+          <div id="previewGroups" class="groups"></div>
+        </section>
+      </section>
+    </main>
+
+    <template id="groupTemplate">
+      <section class="value-group">
+        <h2></h2>
+        <div class="value-grid"></div>
+      </section>
+    </template>
+
+    <template id="valueTemplate">
+      <article class="value-card">
+        <div>
+          <h3></h3>
+          <p class="meta"></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="profile-builder.js?v=20260617-w3000-serial"></script>
+  </body>
+</html>
